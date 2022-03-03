@@ -1,10 +1,10 @@
 // import {useState} from "react";
-import useInput from '../hooks/use-input';
+import useInput from "../hooks/use-input";
 
 const SimpleInput = (props) => {
-  const {value: enteredName, isValid: enteredNameIsValid, hasError: nameInputHasError, valueChangeHandler: nameChangeHandler, inputBlurHandler: nameBlurHandler, resetValue: resetNameInput} = useInput((value) => value.trim() !== '');
+  const {value: enteredName, isValid: enteredNameIsValid, hasError: nameInputHasError, valueChangeHandler: nameChangeHandler, valueBlurHandler: nameBlurHandler, resetValue: resetNameInput} = useInput((value) => value.trim() !== '');
 
-  const {value: enteredEmail, isValid: enteredEmailIsvalid, hasError: emailInputHasError, valueChangeHandler: emailChangeHandler, inputBlurHandler: emailBlurHandler, resetValue: resetEmailInput} = useInput((value) => value.includes('@'));
+  const {value: enteredEmail, isValid: enteredEmailIsvalid, hasError: emailInputHasError, valueChangeHandler: emailChangeHandler, valueBlurHandler: emailBlurHandler, resetValue: resetEmailInput} = useInput((value) => value.includes('@'));
 
 
   let formIsValid = false;
